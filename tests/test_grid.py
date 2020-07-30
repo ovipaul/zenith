@@ -71,6 +71,6 @@ def test_grid():
     img_height = 250
     file_name = 'test_image.png'
     number_of_grid = grid(file_name,img_width,img_height,overlap_percentage,output_directory)
-
+    print("yolo")
     assert number_of_grid == 81
 
