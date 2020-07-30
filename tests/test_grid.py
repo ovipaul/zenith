@@ -16,7 +16,7 @@ def grid(img_file,img_width,img_height,overlap_percentage,output_directory):
     file_name = img_file.rstrip('.png')
 
     with open(img_file, 'rb') as f:
-    img = Image.open(io.BytesIO(f.read()))
+        img = Image.open(io.BytesIO(f.read()))
 
     # img = Image.open(img_file) 
     
