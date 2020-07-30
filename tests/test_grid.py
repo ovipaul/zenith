@@ -32,21 +32,21 @@ def grid(img_file,img_width,img_height,overlap_percentage,output_directory):
 
     counter = 0
 
-    for i in range(row):
-        if (row-bottom) < img_height :
+    for row in range(rows):
+        if (rows-bottom) < img_height :
             break
         #initial vs other time values
-        if i is not 0:
+        if row != 0:
             top = top+overlap
             bottom = bottom+overlap
 
         left = 0
         right = img_width
         
-        for j in range(col):
-            if (col-right) < img_width :
+        for col in range(cols):
+            if (cols-right) < img_width :
                 break
-            if j is not 0:
+            if col != 0:
                 left = left+overlap
                 right = right+overlap
 
