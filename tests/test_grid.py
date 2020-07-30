@@ -2,7 +2,7 @@ from PIL import Image
 import glob
 import numpy as np
 # from zenith.grid import grid
-
+import io
 Image.MAX_IMAGE_PIXELS = 350000000000000
 
 
@@ -15,8 +15,10 @@ def grid(img_file,img_width,img_height,overlap_percentage,output_directory):
     overlap_percentage = 100-overlap_percentage
     file_name = img_file.rstrip('.png')
 
+    with open(img_file, 'rb') as f:
+    img = Image.open(io.BytesIO(f.read()))
 
-    img = Image.open(img_file) 
+    # img = Image.open(img_file) 
     
 
     cal_img = np.array(img)
