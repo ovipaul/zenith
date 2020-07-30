@@ -6,9 +6,6 @@ import io
 Image.MAX_IMAGE_PIXELS = 350000000000000
 
 
-# Improting Image class from PIL module 
-from PIL import Image 
-import numpy as np
 # Opens a image in RGB mode 
 from zenith.grid import grid
 
