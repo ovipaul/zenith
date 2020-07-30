@@ -20,7 +20,7 @@ def grid(img_file,img_width,img_height,overlap_percentage,output_directory):
     
 
     cal_img = np.array(img)
-    row, col, cha = cal_img.shape
+    rows, cols, cha = cal_img.shape
 
 
     overlap = int((img_width*overlap_percentage)/100)
@@ -31,7 +31,9 @@ def grid(img_file,img_width,img_height,overlap_percentage,output_directory):
 
 
     counter = 0
-
+    #initial coordinate
+    row = 0
+    col = 0
     for row in range(rows):
         if (rows-bottom) < img_height :
             break
