@@ -12,7 +12,7 @@ def grid(img_file, img_dim, overlap_percentage):
 
     cal_img = np.array(img)
 
-    rows, cols  = cal_img.shape[0:2]
+    rows, cols = cal_img.shape[0:2]
 
     overlap = int((img_dim*overlap_percentage)/100)#img_width
 
@@ -26,7 +26,7 @@ def grid(img_file, img_dim, overlap_percentage):
     col = 0
 
     for row in range(rows):
-        if (rows-bottom) < img_dim : #img_height
+        if(rows-bottom) < img_dim : #img_height
             break
         #initial vs other time values
         if row != 0:
@@ -36,7 +36,7 @@ def grid(img_file, img_dim, overlap_percentage):
         left = 0
         right = img_dim     #img_width
         for col in range(cols):
-            if (cols-right) < img_dim : #img_width
+            if(cols-right) < img_dim : #img_width
                 break
             if col != 0:
                 left = left+overlap
